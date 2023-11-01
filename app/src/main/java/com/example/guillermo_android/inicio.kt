@@ -3,6 +3,7 @@ package com.example.guillermo_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 
 class inicio : AppCompatActivity() {
 
@@ -20,6 +21,11 @@ class inicio : AppCompatActivity() {
         setContentView(R.layout.activity_inicio)
 
 
+        val Intent = intent
+        val usu= Intent.getStringExtra("email")
+        val mostrar = findViewById<TextView>(R.id.email)
+
+        mostrar.text = "Bienvenido: $usu";
 
 
     }

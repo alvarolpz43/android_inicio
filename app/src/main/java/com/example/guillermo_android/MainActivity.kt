@@ -42,12 +42,14 @@ class MainActivity : AppCompatActivity() {
 
 
             if (usuario == "lopezquira10@gmail.com" && contraseña == "12345678") {
-                val intent = Intent(this, inicio::class.java).apply {
-                    putExtra(usuario, contraseña)
-                }
+                val intent = Intent(this, inicio::class.java)
+
+                val mensaje = "Bienvenido: $usuario"
+
+                Toast.makeText(applicationContext,mensaje,Toast.LENGTH_SHORT).show()
+                intent.putExtra("usuario",usuario)
                 startActivity(intent)
 
-                finish()
             } else {
                 Toast.makeText(applicationContext, "Inicio de Sesion Fallido", Toast.LENGTH_LONG)
                     .show()
