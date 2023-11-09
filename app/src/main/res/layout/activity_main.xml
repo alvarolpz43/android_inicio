@@ -1,78 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".ui.MainActivity"
+    >
 
-
-    <TextView
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/app_name"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardEnter"
+        android:orientation="vertical"
+        android:id="@+id/titulo"
+        tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="179dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vector" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="379dp"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="10dp"
-        android:hint="Correo:" />
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        android:id="@+id/cardEnter"
+        tools:ignore="MissingConstraints">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="379dp"
+
+        <ImageView
+            android:layout_width="195dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grisesitouwu"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="379dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/editext"
+            android:hint="Correo:" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="379dp"
+            android:inputType="textPassword"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/editext"
+            android:hint="Contraseña:" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Olvidaste tu contraseña"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/grisesitouwu"
+            android:text="@string/register" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp"
-        android:hint="Contraseña"/>
-
-    <TextView
-        android:id="@+id/registro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="70dp"
-        android:text="Si no tienes una cuenta registrate aqui..."
-        />
-
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/cardEnter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
     <Button
         android:id="@+id/boton"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
         android:text="Iniciar"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/grisesitouwu"
         android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="933dp" />
+        tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

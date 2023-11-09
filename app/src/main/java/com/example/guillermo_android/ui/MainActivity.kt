@@ -1,12 +1,10 @@
-package com.example.guillermo_android
+package com.example.guillermo_android.ui
 
 import android.content.Intent
-import android.content.SharedPreferences
+import com.example.guillermo_android.data.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.inputmethod.InputBinding
-import android.widget.Button
 import android.widget.Toast
 import com.example.guillermo_android.databinding.ActivityMainBinding
 
@@ -15,13 +13,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var contraseña: String;
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var sharedPref: SharedPreferences
+    private lateinit var sharedPref:SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        // sharedPref = SharedPreferences(this)
+         sharedPref = SharedPreferences(this)
+
+
+
 
         val ediTextUsuario: android.widget.EditText = binding.email
         val ediTextContraseña: android.widget.EditText = binding.password

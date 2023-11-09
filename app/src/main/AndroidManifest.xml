@@ -14,7 +14,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".Splash"
+            android:name=".ui.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,22 +23,20 @@
         </activity>
 
         <activity
-            android:name=".registro"
-            android:exported="false">
+            android:name=".ui.registro"
+            android:exported="false"/>
             <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
-        </activity>
+
 
         <activity
-            android:name=".inicio"
-            android:exported="false">
+            android:name=".ui.inicio"
+            android:exported="false"/>
             <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
-        </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
+            android:name=".ui.MainActivity"
+            android:exported="false"/>
             <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
-        </activity>
 
     </application>
 

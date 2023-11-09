@@ -1,4 +1,4 @@
-package com.example.guillermo_android
+package com.example.guillermo_android.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import com.example.guillermo_android.databinding.ActivitySplashBinding
 class Splash : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
-    private val SPLASH_TIME_OUT: Long = 3000
+    private val SPLASH_TIME_OUT: Long = 1000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

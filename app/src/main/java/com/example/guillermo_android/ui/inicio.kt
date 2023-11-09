@@ -1,9 +1,9 @@
-package com.example.guillermo_android
+package com.example.guillermo_android.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.guillermo_android.R
 
 class inicio : AppCompatActivity() {
 

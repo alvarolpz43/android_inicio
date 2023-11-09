@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="document_types">
+        <item>Tipo de documento</item> <!-- Valor predeterminado -->
+        <item>DNI</item>
+        <item>Pasaporte</item>
+        <item>Cédula</item>
+        <!-- Agrega más tipos según sea necesario -->
+    </string-array>
+</resources>
+

@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registro">
+    tools:context=".ui.registro">
 
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
         android:orientation="vertical"
         android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,16 +20,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Registro"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="133dp" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="-7dp"
+            android:layout_gravity="center_horizontal"
+            />
 
     </LinearLayout>
 
@@ -38,17 +34,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:id="@+id/img"
         app:layout_constraintBottom_toTopOf="@id/card"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/header"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="91dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="Registro de Usuario"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <Spinner
+            android:id="@+id/spinnerDocumentType"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/document_types"
+            style="@style/SpinnerStyle"
+            android:background="@drawable/spinner"
+            />
+
+
 
     </LinearLayout>
 
@@ -70,37 +95,43 @@
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/editext"
                 android:hint="Numero de indentificacion" />
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/editext"
                 android:hint="Nombres" />
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/editext"
                 android:hint="Apellidos" />
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/editext"
                 android:hint="correo" />
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/editext"
                 android:hint="Contraseña" />
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/editext"
                 android:hint="Confirmar contraseña" />
 
         </LinearLayout>
