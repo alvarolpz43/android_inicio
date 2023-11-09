@@ -12,21 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Guillermo_android"
         tools:targetApi="31">
+
         <activity
-            android:name=".registro"
-            android:exported="false" />
-        <activity
-            android:name=".inicio"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".registro"
+            android:exported="false">
+            <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
+        </activity>
+
+        <activity
+            android:name=".inicio"
+            android:exported="false">
+            <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+            <!-- Puedes agregar intent-filter si esta actividad también puede ser iniciada desde otras partes -->
+        </activity>
+
     </application>
 
 </manifest>
